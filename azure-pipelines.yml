@@ -1,4 +1,12 @@
 # Docker
+- task: KubernetesManifest@1
+  inputs:
+    action: 'deploy'
+    connectionType: 'azureResourceManager'
+    azureSubscriptionConnection: 'Azure subscription 1(7071ebe6-7550-438e-b933-bee4af232cd0)'
+    azureResourceGroup: 'MyLab-RG'
+    kubernetesCluster: 'mylab-cluster'
+    manifests: 'chagalab'
 # Build and push an image to Azure Container Registry
 # https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 
